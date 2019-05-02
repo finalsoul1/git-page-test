@@ -1,18 +1,44 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import {Gnb} from 'containers'
+import { BrowserRouter } from 'react-router-dom'
+import { Grid, Segment } from 'semantic-ui-react'
+
+import { Gnb } from 'containers'
 
 import Routes from 'router'
 
-import './App.css'
+import './App.scss'
 
-function App() {
-  return (
-    <div className="App">
-      <Gnb />
-      <Routes />
-    </div>
-  )
+class App extends Component {
+  state = {
+    width: ''
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions()
+    window.addEventListener('resize', this.updateWindowDimensions)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions)
+  }
+  render() {
+    return (
+      <div className="App">
+        <BrowserRouter basename="/git-page-test">
+          <br/>
+          <h1 className='center' >React 연습 Page</h1>
+          <Gnb width={this.state.width} />
+          <Routes />
+        </BrowserRouter>
+      </div>
+    )
+  }
+
+  updateWindowDimensions = () => {
+    this.setState({
+      width: window.innerWidth
+    })
+  }
 }
 
 export default App

@@ -1,30 +1,14 @@
 import React from 'react'
+import { Image } from 'semantic-ui-react'
+import { bono } from 'imgs'
 
 const Home = () => {
   return (
     <div>
-      홈입니다.
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
-      <h3>스크롤 테스트 합니다</h3>
+      <h3 className='center'>홈입니다.</h3>
+      <Image src={bono} size='large' centered />
+      <Image src={bono} size='large' centered />
+      <Image src={bono} size='large' centered />
     </div>
   )
 }
