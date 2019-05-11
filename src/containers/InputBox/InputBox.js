@@ -15,11 +15,12 @@ export default class InputBox extends Component {
         <Form.Field inline>
           {inputState ? (
             <Input
-              className={option.location}
+              style={option.style}
               icon={<Icon name="search" inverted circular link onClick={this._handleSubmit} />}
               onChange={this._handleChange}
               placeholder={option.placeholder}
               value={this.state.inputData}
+              onFocus={option.focused}
             />
           ) : (
             <Input

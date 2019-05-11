@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import {
-  Container,
-  Dropdown,
-  Menu,
-  Visibility
-} from 'semantic-ui-react'
+import { Container, Dropdown, Menu, Visibility } from 'semantic-ui-react'
 import './Gnb.scss'
 
 const menuStyle = {
@@ -60,6 +55,12 @@ class Gnb extends Component {
                 </Menu.Item>
                 <Menu.Item as={NavLink} to="/weather">
                   Weather
+                </Menu.Item>
+                <Menu.Item as={NavLink} to="/pattern">
+                  Store Pattern
+                </Menu.Item>
+                <Menu.Item as={NavLink} to="/todo">
+                  Todo
                 </Menu.Item>
 
                 <Menu.Menu position="right">

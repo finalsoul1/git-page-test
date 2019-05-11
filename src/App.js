@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-
 import { BrowserRouter } from 'react-router-dom'
-import { Grid, Segment } from 'semantic-ui-react'
-
 import { Gnb } from 'containers'
-
 import Routes from 'router'
 
 import './App.scss'

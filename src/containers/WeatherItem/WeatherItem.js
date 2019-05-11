@@ -3,7 +3,7 @@ import React from 'react'
 import { GoogleMapView } from 'containers'
 
 import { Grid, Image } from 'semantic-ui-react'
-import { bono } from 'imgs'
+import { bono } from 'resource'
 
 const WeatherItem = ({weatherData}) => {
   console.log('웨더아이템', weatherData.city);
@@ -11,7 +11,7 @@ const WeatherItem = ({weatherData}) => {
   const { lon, lat } = weatherData.city.coord
 
   return (
-    <Grid columns={3} divided>
+    <Grid columns={3}>
       <Grid.Row>
         <Grid.Column>
           <GoogleMapView
